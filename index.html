@@ -72,11 +72,11 @@
                 return; 
             }
 
-            // Use QRme API to generate the QR code
+            // Use QRServer API to generate the QR code
             const imgQR = document.getElementById("imgqr");
-            const apiUrl = `https://qrme.com/api/v1/generate?data=${encodeURIComponent(inputText)}&size=400x400`;
+            const apiUrl = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(inputText)}`;
 
-            // Update the image source with the QRme API URL
+            // Update the image source with the QRServer API URL
             imgQR.src = apiUrl;
             imgQR.alt = "Generated QR Code";
         }
